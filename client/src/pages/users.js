@@ -26,6 +26,7 @@ export const Users = () => {
         Boolean(users.data.length) && (
           <Listing size={30} headers={['id', 'login']}>
             <Title>Users</Title>
+            <div>Click on row to see details.</div>
             <Header>
               <Cell size={1}>id</Cell>
               <Cell size={2}>login</Cell>
