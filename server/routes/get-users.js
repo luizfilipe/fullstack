@@ -1,28 +1,9 @@
-import axios from 'axios'
 import { format } from 'url'
-import { last } from 'lodash'
-import { HOST as host } from './utils/constants'
+import { defaultRequestHandler } from './utils/default-request-handler'
 
-export const getUsers = async ({ query }, res, next) => {
-  try {
-    const { data: users } = await axios.get(format({
-      host,
-      pathname: '/users',
-      query
-    }))
-
-    res
-      .status(200)
-      .json({
-        users,
-        next: last(users).id
-      })
-      .end()
-  } catch (err) {
-    res
-      .status(err.response ? err.response.status : 500)
-      .send(err)
-      .end()
-  }
-  next()
+export const getUsers = ({ query }, res, next) => {
+  defaultRequestHandler(format({
+    pathname: '/users',
+    query
+  }), res).then(next)
 }

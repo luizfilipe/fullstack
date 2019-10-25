@@ -8,7 +8,7 @@ export const Container = styled.div`
 `
 
 export const Button = styled.button`
-  color: ${Colors.AZURE_RADIANCE};
+  color: ${props => props.enabled ? Colors.AZURE_RADIANCE : Colors.GEYSER};
   padding: .5rem .75rem;
   border: 1px solid ${Colors.GEYSER};
   outline: none;

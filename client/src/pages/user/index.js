@@ -17,7 +17,7 @@ export const User = () => {
   useEffect(() => {
     fetch()
   }, [])
-  const { login } = userDetail
+  const { login, id, html_url: url, created_at: createdAt } = userDetail
   return (
     <Layout>
       {
@@ -28,17 +28,17 @@ export const User = () => {
           </Title>
           <div>
             <div>
-              <Info>Id:</Info> {userDetail.id}
+              <Info>Id:</Info> {id}
             </div>
             <div>
-              <Info>Login:</Info> {userDetail.login}
+              <Info>Login:</Info> {login}
             </div>
             <div>
               <Info>Profile's URL:</Info>
-              <a href={userDetail.html_url}>{userDetail.html_url}</a>
+              <a href={url}>{url}</a>
             </div>
             <div>
-              <Info>Date of creation:</Info> {new Date(userDetail.created_at).toDateString()}
+              <Info>Date of creation:</Info> {new Date(createdAt).toDateString()}
             </div>
           </div>
           <Button to={`/user/${username}/repos`}>
