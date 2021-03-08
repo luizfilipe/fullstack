@@ -1,6 +1,6 @@
-# fullstack-test
-This project is just a test for a 
-full stack role @ shaw and partners
+# fullstack
+This project is for a 
+full stack role
 
 ## Installation
 Run `npm install`
