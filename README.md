@@ -1,6 +1,6 @@
 # fullstack
 This project is for a 
-full stack role
+full-stack role
 
 ## Installation
 Run `npm install`
