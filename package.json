@@ -20,7 +20,7 @@
   "homepage": "https://github.com/luizfilipe/fullstack-test#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "lodash": "^4.17.19",
     "parse-link-header": "^1.0.1",
     "react": "^16.11.0",
